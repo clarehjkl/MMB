@@ -1,0 +1,79 @@
+/* 头部 */
+
+#head {
+    width: 100%;
+    height: 40px;
+    background-color: #ff841d;
+    display: flex;
+    justify-content: space-between;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+    }
+    .logo {
+        img {
+            width: 200px;
+        }
+    }
+    .download {
+        padding-right: 10px;
+        img {
+            width: 34px;
+        }
+    }
+}
+
+/* 搜索 */
+
+.search {
+    width: 100%;
+    .search_all {
+        width: 100%;
+        height: 50px;
+        border-bottom: 2px solid #ccc;
+        padding: 0 10px;
+        position: relative;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input {
+            height: 30px;
+            font-size: 18px;
+            border-radius: 15px;
+        }
+        input[type="text"] {
+            width: 100%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+        input[type="button"] {
+            width: 60px;
+            color: #fff;
+            background-color: #ff841d;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    }
+}
+
+/* 导航 */
+
+.nav {
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+    color: #666;
+    padding-left: 5px;
+    border-bottom: 1px solid #ccc;
+    background-image: linear-gradient(#ffffff, #ebebeb);
+    display: flex;
+    align-items: center;
+    a {
+        padding: 0 5px;
+    }
+}
