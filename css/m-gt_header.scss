@@ -1,15 +1,37 @@
 /* 封装 B */
-@mixin mmm-sprites($x, $y) {
-    background-image: url('../images/header_app.png');
-    background-position: $x $y;
-    background-size: 400px 264px;
-}
 $orange:#ff841d;
 /* 封装 E */
+
 /* 头部固定框 */
-.header{
+
+#header {
     width: 100%;
-    height: 70px;
+    height: 40px;
     background-color: $orange;
     color: #fff;
+    font-weight: 700;
+    font-family: "宋体";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    .back {
+        width: 40px;
+        font-size: 24px;
+        color: #fff;
+        text-align: center;
+        line-height: 40px;
+    }
+    span {
+        flex: 1;
+        font-size: 18px;
+        text-align: center;
+        line-height: 40px;
+    }
+    .download {
+        width: 40px;
+        padding: 5px;
+    }
 }

@@ -1,0 +1,161 @@
+/* 主要内容 */
+
+.main {
+    width: 100%;
+    background-color: #f1f1f1;
+    color: #666;
+    a {
+        color: inherit;
+    }
+    /* 导航 */
+    .nav_all {
+        width: 100%;
+        height: 40px;
+        position: relative;
+        left: 0;
+        top: 40px;
+        margin-bottom: 40px;
+        .nav-top {
+            width: 100%;
+            height: 40px;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            /* 导航左边 过滤部分 */
+            .filtrate {
+                flex: 1;
+                display: flex;
+                ul {
+                    flex: 1;
+                    li {
+                        width: 100%;
+                        a {
+                            width: 100%;
+                            height: 40px;
+                            font-size: 16px;
+                            line-height: 40px;
+                            text-align: center;
+                            overflow: hidden;
+                        }
+                        i {
+                            font-size: 10px;
+                            margin-left: 3px;
+                        }
+                    }
+                }
+            }
+            /* 导航右边 搜索部分 */
+            .search {
+                width: 50px;
+                border-left: 2px solid #ccc;
+                i {
+                    width: 50px;
+                    text-align: center;
+                    font-size: 18px;
+                    line-height: 40px;
+                }
+            }
+        }
+        /* 导航栏的 下拉部分 */
+        .down_list {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 40px;
+            display: none;
+            li {
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                font-size: 18px;
+                padding-left: 10px;
+                background-color: #fff;
+                border-bottom: 1px solid #ccc;
+            }
+        }
+    }
+    .content {
+        width: 100%;
+        ul {
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li {
+                width: 49%;
+                margin-bottom: 10px;
+                background-color: #fff;
+                a {
+                    .detail_bottom {
+                        padding: 5px;
+                        p {
+                            font-size: 12px;
+                            margin: 0;
+                            padding-left: 5px;
+                        }
+                        .other {
+                            display: flex;
+                            justify-content: space-between;
+                            .price {
+                                color: red;
+                                font-size: 20px;
+                                font-weight: 700;
+                            }
+                            .gopool {
+                                padding: 5px 10px;
+                                background-color: #ff9501;
+                                color: #fff;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 返回顶部 侧边栏 */
+
+.side {
+    position: fixed;
+    right: 0;
+    bottom: 15px;
+    width: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .side_download {
+        color: #fff;
+        span:nth-child(1) {
+            width: 50px;
+            height: 50px;
+            padding: 5px;
+            font-size: 30px;
+            font-weight: 700;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: #ff5100;
+            margin-bottom: 10px;
+        }
+        span:nth-child(2) {
+            font-size: 12px;
+            background-color: #ff5100;
+            padding: 2px 5px;
+            border-radius: 15px;
+        }
+    }
+    .backtop {
+        color: #666;
+        background-color: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+}
+.on{
+    display: block !important;
+}
