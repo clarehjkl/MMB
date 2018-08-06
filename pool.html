@@ -33,21 +33,21 @@
                     <ul class="shop">
                         <li>
                             <a href="javascript:;">京东
-                                <i class="glyphicon glyphicon-triangle-bottom"></i>
+                                <i class='glyphicon glyphicon-triangle-bottom'></i>
                             </a>
                         </li>
                     </ul>
                     <ul class="area">
                         <li>
                             <a href="javascript:;">华北
-                                <i class="glyphicon glyphicon-triangle-bottom"></i>
+                                <i class='glyphicon glyphicon-triangle-bottom'></i>
                             </a>
                         </li>
                     </ul>
                     <ul class="all_price">
                         <li>
                             <a href="javascript:;">全部价格
-                                <i class="glyphicon glyphicon-triangle-bottom"></i>
+                                <i class='glyphicon glyphicon-triangle-bottom'></i>
                             </a>
                         </li>
                     </ul>
@@ -119,6 +119,7 @@
         {{ each data value index }}
         <li>
             <a href="javascript:;" name="{{value.shopId}}">{{value.shopName}}</a>
+            <span class="glyphicon glyphicon-ok"></span>
         </li>
         {{ /each }}
     </ul>
@@ -128,6 +129,7 @@
         {{ each data value index }}
         <li>
             <a href="javascript:;" name="{{value.areaId}}">{{value.areaName}}</a>
+            <span class="glyphicon glyphicon-ok"></span>
         </li>
         {{ /each }}
     </ul>
@@ -153,4 +155,5 @@
 </script>
 
 <script src="./js/pool.js"></script>
+
 </html>

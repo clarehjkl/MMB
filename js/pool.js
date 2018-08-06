@@ -2,28 +2,32 @@ $(function () {
 
     var shopId = 0;
     var areaId = 0;
-    //注册委托事件 将参数传入
+    //注册委托事件 将参数传入 显示筛选类别
     $('.shop_list').on("click", "li", function () {
-        var shop_a = this.getElementsByTagName('a')[0];
+        var shop_a = $(this).children('a').html();
         shopId = shop_a.name;
         detail();
-        // $('.shop').html(this);
+        $('.shop li a').html(shop_a +" <i class='glyphicon glyphicon-triangle-bottom'></i>");
         $('.down_list').removeClass('on');
+        $('.shop_list li span').removeClass('on');
+        $(this).children('span').addClass('on');
     })
     $('.area_list').on("click", "li", function () {
-        var area_a = this.getElementsByTagName('a')[0];
+        var area_a = $(this).children('a').html();
         areaId = area_a.name;
         detail();
-        // $('.area').html($(this));
+        area_a = area_a.split('（')[0];
+        $('.area li a').html(area_a + " <i class='glyphicon glyphicon-triangle-bottom'></i>");
         $('.down_list').removeClass('on');
-
+        $('.area_a li span').removeClass('on');
+        $(this).children('span').addClass('on');
     })
 
     //注册显示下拉框事件
     $('.shop').on('click', function () {
         var on = $('.down_list').hasClass('on') ? '' : 'on';
         $('.down_list').removeClass('on');
-        $('.shop_list').addClass(on);
+        $('.shop_list').addClass('on');
     })
     $('.area').on('click', function () {
         var on = $('.down_list').hasClass('on') ? '' : 'on';
@@ -75,21 +79,4 @@ $(function () {
         })
     }
 
-    // var lisss = document.querySelector(".shop_list").getElementsByTagName("li");
-    // console.log(lisss);
-
-
-
-
-    // var shopId=
-    // $.ajax({
-    //     'url': 'http://193.112.55.79:9090/api/getgsproduct',
-    //     'type':'get',
-    //     'data':{'shopid':shopId,'areaid':areaId},
-    //     'datatype': 'json',
-    //     'success':function (res) {
-    //         console.log(res);
-
-    //     }
-    // })
 })
