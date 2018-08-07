@@ -3,7 +3,7 @@ $(function () {
     var shopId = 0;
     var areaId = 0;
     //注册委托事件 将参数传入 显示筛选类别
-    $('.shop_list').on("click", "li", function () {
+    $('.shop_list').on("tap", "li", function () {
         var shop_text = $(this).children('a').html();
         var shop_a = $(this).children('a')[0];
         shopId = shop_a.name;
@@ -14,7 +14,7 @@ $(function () {
         detail();
         
     })
-    $('.area_list').on("click", "li", function () {
+    $('.area_list').on("tap", "li", function () {
         var area_text = $(this).children('a').html();
         var area_a=$(this).children('a')[0];
         areaId = area_a.name;
@@ -28,12 +28,12 @@ $(function () {
     })
 
     //注册显示下拉框事件
-    $('.shop').on('click', function () {
+    $('.shop').on('tap', function () {
         var on = $('.down_list').hasClass('on') ? '' : 'on';
         $('.down_list').removeClass('on');
         $('.shop_list').addClass('on');
     })
-    $('.area').on('click', function () {
+    $('.area').on('tap', function () {
         var on = $('.down_list').hasClass('on') ? '' : 'on';
         $('.down_list').removeClass('on');
         $('.area_list').addClass('on');
