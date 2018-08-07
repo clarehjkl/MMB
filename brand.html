@@ -12,6 +12,7 @@
 
 <body>
     <!-- 头部 -->
+    <div id="top"></div>
     <div id="head">
         <a href="javascript:;" class="logo">
             <img src="./images/header_logo.png" alt="">
@@ -27,28 +28,132 @@
             <input type="button" class="search" value="搜索">
         </div>
     </div>
-    <!-- 导航 -->
-    <div class="nav">
-        <a href="javascript:;">首页</a>
-        &gt;
-        <a href="./sign.html">品牌大全</a>
-        &gt;
-        <a href="javascript:;">平板电视哪个牌子好</a>
+    <!-- 主要内容 -->
+    <div class="main">
+        <!-- 导航 -->
+        <div class="nav">
+            <a href="javascript:;">首页</a>
+            &gt;
+            <a href="./sign.html">品牌大全</a>
+            &gt;
+            <a href="javascript:;">平板电视哪个牌子好</a>
+        </div>
+        <!-- 品牌排行 -->
+        <div class="ranking">
+            <h3 class="ranking_title">平板电视哪个牌子好</h3>
+            <ul class="ranking_content">
+
+
+                <!-- ranking_content     占坑 -->
+
+
+            </ul>
+        </div>
+        <!-- 销量排行 -->
+        <div class="sales">
+            <h3 class="sales_title">平板电视产品销量排行</h3>
+            <ul class="sales_content">
+
+
+                <!-- sales_content     占坑 -->
+
+
+            </ul>
+        </div>
+        <!-- 用户评论 -->
+        <div class="comment">
+            <h3 class="comment_title">平板电视最新评论</h3>
+            <ul class="comment_content">
+
+
+                <!-- comment_content     占坑 -->
+
+
+            </ul>
+        </div>
+        <!-- 底部 -->
+        <div class="foot">
+            <ul class="foot_top">
+                <li>
+                    <a href="javascript:;">登录</a>
+                </li>
+                <li>
+                    <a href="javascript:;">注册</a>
+                </li>
+                <li>
+                    <a href="#top">
+                        <i>
+                            <span class="back_top"></span>
+                            <span class="back_bottom"></span>
+                        </i>返回顶部
+                    </a>
+                </li>
+            </ul>
+            <div class="foot_bottom">
+                <p>
+                    <a href="javascript:;">手机APP下载</a>&nbsp;慢慢买手机版--掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
     </div>
-
-
-
-
-
-
     <script src="./lib/jquery/jquery.min.js"></script>
-    <script src="./lib/src/zepto.js"></script>
+    <!-- <script src="./lib/src/zepto.js"></script>
+    <script src="./lib/src/touch.js"></script> -->
     <script src="./lib/art-template/template-web.js"></script>
-    <script type="text/template" id="sign_detail">
-        
-        
-
-
+    <script src="./js/brand.js"></script>
+    <script type="text/template" id="ranking_content">
+        {{ each data value index}}
+        <li>
+            <a href="javascript:;" categoryId="{{value.categoryId}}" brandTitleId="{{value.brandTitleId}}">
+                <h4>{{(value.brandId+1)%10}}</h4>
+                <div class="ranking_detail">
+                    <p>{{value.brandName}}</p>
+                    <span>{{value.brandInfo}}</span>
+                </div>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+    <script type="text/template" id="sales_content">
+        {{ each data value index}}
+        <li>
+            <a href="javascript:;">
+                <div class="sales_content_l">
+                    {{@ value.productImg}}
+                </div>
+                <div class="sales_content_r">
+                    <p class="TV_title">{{value.productName}}</p>
+                    <p class="TV_other">
+                        <span class="TV_price">{{value.productPrice}}</span>
+                        <span class="TV_star">★★★★★</span>
+                    </p>
+                    <span class="TV_com">{{value.productQuote}} 全网{{value.produCom}}</span>
+                </div>
+            </a>
+        </li>
+        {{ /each}}
+    </script>
+    <script type="text/template" id="comment_content">
+        {{ each data value index}}
+        <li>
+            <a href="javascript:;" class="comment_commodity">
+                <img src="./images/commodity.jpg" alt="">
+                <p>{{value.comFrom}}</p>
+            </a>
+            <div class="comment_detail">
+                <a href="javascript:;" class="comment_edit">
+                    <div class="user clearfix">
+                        <span class="user_id">{{value.comName}}：</span>
+                        <span class="user_star">★★★★★</span>
+                        <span class="user_time">{{value.comTime}}</span>
+                    </div>
+                    <div class="comment_text">
+                        {{value.comContent}}
+                    </div>
+                </a>
+            </div>
+        </li>
+        {{/each}}
     </script>
 </body>
 

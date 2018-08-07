@@ -1,4 +1,21 @@
 @charset "UTF-8";
+/* 公共样式 */
+h3 {
+  width: 100%;
+  height: 35px;
+  font-size: 14px;
+  color: #874604;
+  background-color: #f2f2f2;
+  padding-left: 10px;
+  border-bottom: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /* 头部 */
 #head {
   width: 100%;
@@ -82,8 +99,16 @@
   top: 10px;
 }
 
-/* 导航 */
-.nav {
+/* 主要内容 */
+.main {
+  /* 导航 */
+  /* 品牌排行 */
+  /* 销量排行 */
+  /* 用户评论 */
+  /* 底部 */
+}
+
+.main .nav {
   width: 100%;
   height: 35px;
   font-size: 14px;
@@ -100,7 +125,305 @@
           align-items: center;
 }
 
-.nav a {
+.main .nav a {
   padding: 0 5px;
+}
+
+.main .ranking .ranking_content li {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.main .ranking .ranking_content li a {
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  position: relative;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .ranking .ranking_content li a h4 {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  background-color: #c9c9c9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .ranking .ranking_content li a .ranking_detail {
+  padding-left: 10px;
+}
+
+.main .ranking .ranking_content li a .ranking_detail span {
+  font-size: 12px;
+  color: #666;
+}
+
+.main .ranking .ranking_content li a::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 25px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #999;
+  border-color: #999 #999 transparent transparent;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.main .ranking .ranking_content li:nth-child(1) a h4 {
+  background-color: red;
+}
+
+.main .ranking .ranking_content li:nth-child(2) a h4 {
+  background-color: orange;
+}
+
+.main .ranking .ranking_content li:nth-child(3) a h4 {
+  background-color: greenyellow;
+}
+
+.main .sales .sales_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .sales .sales_content li {
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.main .sales .sales_content li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .sales .sales_content li a .sales_content_l img {
+  width: 100px;
+  height: 100px;
+}
+
+.main .sales .sales_content li a .sales_content_r {
+  width: 100%;
+  padding-left: 10px;
+}
+
+.main .sales .sales_content li a .sales_content_r .TV_title {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.main .sales .sales_content li a .sales_content_r .TV_other {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .sales .sales_content li a .sales_content_r .TV_other .TV_price {
+  color: red;
+}
+
+.main .sales .sales_content li a .sales_content_r .TV_other .TV_star {
+  color: #ff9000;
+  font-size: 20px;
+}
+
+.main .sales .sales_content li a .sales_content_r .TV_com {
+  color: #999;
+  font-size: 12px;
+}
+
+.main .comment .comment_content li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.main .comment .comment_content li .comment_commodity {
+  background-color: #fff;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .comment .comment_content li .comment_commodity img {
+  width: 80px;
+  height: 80px;
+}
+
+.main .comment .comment_content li .comment_commodity p {
+  padding-left: 10px;
+  color: #999;
+  font-size: 14px;
+}
+
+.main .comment .comment_content li .comment_detail {
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  padding: 10px;
+  position: relative;
+}
+
+.main .comment .comment_content li .comment_detail .comment_edit {
+  width: 100%;
+}
+
+.main .comment .comment_content li .comment_detail .comment_edit .user {
+  width: 100%;
+  font-size: 14px;
+  color: #999;
+  float: left;
+  line-height: 20px;
+}
+
+.main .comment .comment_content li .comment_detail .comment_edit .user .user_id {
+  color: #666;
+}
+
+.main .comment .comment_content li .comment_detail .comment_edit .user .user_star {
+  font-size: 20px;
+  color: #ff9000;
+}
+
+.main .comment .comment_content li .comment_detail .comment_edit .user .user_time {
+  float: right;
+}
+
+.main .comment .comment_content li .comment_detail .comment_edit .comment_text {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.main .comment .comment_content li .comment_detail::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #f2f2f2;
+  position: absolute;
+  top: -8px;
+  left: 35px;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  border: 1px solid #ccc;
+  border-color: #ccc transparent transparent #ccc;
+}
+
+.main .foot {
+  width: 100%;
+  background-color: #efefef;
+}
+
+.main .foot .foot_top {
+  width: 100%;
+  height: 35px;
+  color: #666;
+  border-bottom: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .foot .foot_top li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .foot .foot_top li a i {
+  display: inline-block;
+  width: 16px;
+  height: 18px;
+  position: relative;
+}
+
+.main .foot .foot_top li a i .back_top {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  border: 5px solid #737373;
+  border-color: #737373 transparent transparent #737373;
+  position: absolute;
+  left: 2px;
+  top: 6px;
+}
+
+.main .foot .foot_top li a i .back_bottom {
+  width: 6px;
+  height: 10px;
+  position: absolute;
+  left: 4px;
+  bottom: -2px;
+  background-color: #737373;
+}
+
+.main .foot .foot_top li:nth-child(-n+2) {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  border-right: 1px solid #ccc;
+}
+
+.main .foot .foot_top li:nth-child(3) {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.main .foot .foot_bottom {
+  width: 100%;
+  height: 60px;
+  padding-top: 15px;
+}
+
+.main .foot .foot_bottom p {
+  font-size: 12px;
+  color: #666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .foot .foot_bottom p a {
+  color: red;
+  display: inline-block;
 }
 /*# sourceMappingURL=brand.css.map */
