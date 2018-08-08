@@ -7,16 +7,16 @@ $(function () {
         var shop_text = $(this).children('a').html();
         var shop_a = $(this).children('a')[0];
         shopId = shop_a.name;
-        $('.shop li a').html(shop_text +" <i class='glyphicon glyphicon-triangle-bottom'></i>");
+        $('.shop li a').html(shop_text + " <i class='glyphicon glyphicon-triangle-bottom'></i>");
         $('.down_list').removeClass('on');
         $('.shop_list li span').removeClass('on');
         $(this).children('span').addClass('on');
         detail();
-        
+
     })
     $('.area_list').on("tap", "li", function () {
         var area_text = $(this).children('a').html();
-        var area_a=$(this).children('a')[0];
+        var area_a = $(this).children('a')[0];
         areaId = area_a.name;
         area_text = area_text.split('（')[0];
         $('.area li a').html(area_text + " <i class='glyphicon glyphicon-triangle-bottom'></i>");
@@ -24,19 +24,15 @@ $(function () {
         $('.area_list li span').removeClass('on');
         $(this).children('span').addClass('on');
         detail();
-        
+
     })
 
     //注册显示下拉框事件
     $('.shop').on('tap', function () {
-        var on = $('.down_list').hasClass('on') ? '' : 'on';
-        $('.down_list').removeClass('on');
-        $('.shop_list').addClass('on');
+        on_off('.shop_list');
     })
     $('.area').on('tap', function () {
-        var on = $('.down_list').hasClass('on') ? '' : 'on';
-        $('.down_list').removeClass('on');
-        $('.area_list').addClass('on');
+       on_off('.area_list');
     })
 
     //获取店铺名称
@@ -61,7 +57,11 @@ $(function () {
     // shopId = $('.shop li a').attr('name');
     // areaId = $('.area li a').attr('name');
     detail();
-
+    function on_off(name) {
+        var on = $(name).hasClass('on') ? '' : 'on';
+        $('.down_list').removeClass('on');
+        $(name).addClass(on);
+    }
     function detail() {
 
         $.ajax({

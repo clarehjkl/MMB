@@ -1,0 +1,209 @@
+@charset "UTF-8";
+/* 头部固定框 */
+#header {
+  width: 100%;
+  height: 40px;
+  background-color: #f4483e;
+  color: #fff;
+  font-weight: 700;
+  font-family: "宋体";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#header .back {
+  width: 40px;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
+
+#header span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 18px;
+  text-align: center;
+  line-height: 40px;
+}
+
+#header .download {
+  width: 40px;
+  padding: 5px;
+}
+
+/* 导航栏 */
+.nav {
+  width: 100%;
+  height: 30px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#dfdfdf));
+  background-image: linear-gradient(#fcfcfc, #dfdfdf);
+  border: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 10px;
+  margin-top: 40px;
+}
+
+.nav a {
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* 优惠券内容 */
+.ticket_category ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ticket_category ul li {
+  width: 100px;
+  height: 80px;
+  border: 1px solid #ccc;
+  margin: 5px;
+}
+
+.ticket_category ul li a {
+  width: 100px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ticket_category ul li a img {
+  width: 50px;
+  height: 50px;
+}
+
+.ticket_category ul li a span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 底部 */
+.foot {
+  width: 100%;
+  background-color: #efefef;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.foot .foot_top {
+  width: 100%;
+  height: 35px;
+  color: #666;
+  border-bottom: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.foot .foot_top li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.foot .foot_top li a i {
+  display: inline-block;
+  width: 16px;
+  height: 18px;
+  position: relative;
+}
+
+.foot .foot_top li a i .back_top {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  border: 5px solid #737373;
+  border-color: #737373 transparent transparent #737373;
+  position: absolute;
+  left: 2px;
+  top: 6px;
+}
+
+.foot .foot_top li a i .back_bottom {
+  width: 6px;
+  height: 10px;
+  position: absolute;
+  left: 4px;
+  bottom: -2px;
+  background-color: #737373;
+}
+
+.foot .foot_top li:nth-child(-n+2) {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  border-right: 1px solid #ccc;
+}
+
+.foot .foot_top li:nth-child(3) {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.foot .foot_bottom {
+  width: 100%;
+  height: 60px;
+  padding-top: 15px;
+}
+
+.foot .foot_bottom p {
+  font-size: 12px;
+  color: #666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.foot .foot_bottom p a {
+  color: red;
+  display: inline-block;
+}
+/*# sourceMappingURL=ticket.css.map */

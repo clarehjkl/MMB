@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/ticket.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="header" background-color="#f4483e">
+        <a href="javascript:;" class="back">&lt;
+            <i class=""></i>
+        </a>
+        <span>优惠券</span>
+        <a href="javascript:;" class="download">
+            <img src="./images/header_app.png" alt="">
+        </a>
+    </div>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <a href="javascript:;">首页&nbsp;&gt;&nbsp;</a>
+
+        <a href="javascript:;">优惠券</a>
+    </div>
+    <!-- 优惠券内容 -->
+    <div class="ticket_category">
+        <ul>
+
+            <!-- ticket_category      占坑 -->
+
+        </ul>
+    </div>
+    <!-- 底部 -->
+    <div class="foot">
+        <ul class="foot_top">
+            <li>
+                <a href="javascript:;">登录</a>
+            </li>
+            <li>
+                <a href="javascript:;">注册</a>
+            </li>
+            <li>
+                <a href="#top">
+                    <i>
+                        <span class="back_top"></span>
+                        <span class="back_bottom"></span>
+                    </i>返回顶部
+                </a>
+            </li>
+        </ul>
+        <div class="foot_bottom">
+            <p>
+                <a href="javascript:;">手机APP下载</a>&nbsp;慢慢买手机版--掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/src/zepto.js"></script>
+    <script src="./lib/art-template/template-web.js"></script>
+    <script src="./js/ticket.js"></script>
+    <script type="text/template" id="ticket_category">
+        {{each data value index}}
+        <li>
+            <a href="./ticket_all.html?couponid={{value.couponId}}">
+                <img src="{{value.couponImg}}" alt="">
+                <span>{{value.couponTitle}}</span>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

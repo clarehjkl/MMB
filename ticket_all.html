@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/ticket_all.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="header" background-color="#f4483e">
+        <a href="javascript:;" class="back">&lt;
+            <i class=""></i>
+        </a>
+        <span>优惠券</span>
+        <a href="javascript:;" class="download">
+            <img src="./images/header_app.png" alt="">
+        </a>
+    </div>
+    <!-- 说明 -->
+    <div class="explain">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+    <!-- 所有优惠券 -->
+    <ul class="ticket_detail">
+
+
+        <!-- ticket_detail    占坑 -->
+
+
+    </ul>
+    <!-- 遮罩层  轮播图 -->
+    <div class="shade">
+        <div class="carousel_left">&lt;</div>
+        <div class="carousel">
+            <div class="carousel_box"></div>
+        </div>
+        <div class="carousel_right">&gt;</div>
+    </div>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/src/zepto.js"></script>
+    <script src="./lib/art-template/template-web.js"></script>
+    <script src="./js/ticket_all.js"></script>
+    <script type="text/template" id="ticket_detail">
+        {{each data value index}}
+        <li couponProductId="{{value.couponProductId}}">
+            <a href="javascript:;">
+                <div class="ticket_detail_l">{{@ value.couponProductImg}}</div>
+                <div class="ticket_detail_r">
+                    <p>{{value.couponProductName}}</p>
+                    <span>{{value.couponProductPrice}}</span>
+                </div>
+            </a>
+            <div class="ticket_time">{{value.couponProductTime}}</div>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>
